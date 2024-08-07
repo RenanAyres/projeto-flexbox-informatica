@@ -1,0 +1,362 @@
+*, *::before , ::after {
+    box-sizing: border-box;
+}
+
+/* variaveis ************************/
+
+:root {
+    --primario: "Nunito", Helvetica, Arial, sans-serif;
+
+    --azul-escuro: #4232AB;
+    --azul-claro: #260AEA;
+    --amarelo-escuro: #968938;
+    --amarelo-claro: #EBCD09;
+    --branco-gelo: #f5f5f5;
+}
+
+/* Estilos gerais ********************/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--branco-gelo);
+    font-family: var(--primario);
+}
+
+a, a:hover, a:active, a:link, a:visited {
+    text-decoration: none;
+    color: black; 
+}
+
+hr {
+    border: none;
+    background-color: var(--amarelo-escuro);
+    height: 2px;
+    width: 140px;
+    margin: 20px auto;
+}
+
+p {
+    padding: 0 10px;
+}
+
+.section__titulo {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Menu ************************************/
+
+.menu-bg {
+    background-color: var(--azul-claro);
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.menu__logo {
+    margin: 10px;
+}
+
+.nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.nav__link {
+    padding: 20px 10px;
+}
+
+/* Header ***********************************/
+
+.intro {
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+/*  Quem somos  *******************************/
+
+.somos {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.somos-c {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.somos-c__texto {
+    flex: 6 1 160px;
+}
+
+.somos-c__img {
+    flex: 1 1 350px;
+}
+
+/* Nossos cursos ******************************/
+
+.cursos {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.cursos-c {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.curso {
+    width: 280px;
+    margin: 0 20px;
+}
+
+.curso__titulo {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px 0 5px 0;
+}
+
+/* Planos ****************************************/
+
+.planos {
+    background-color: var(--amarelo-claro);
+}
+
+.planos-c {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: end;
+}
+
+.plano {
+    width: 290px;
+    margin: 10px;
+    border: 2px solid var(--azul-claro);
+}
+
+.plano__titulo {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.plano__preco {
+    font-size: 3rem;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.plano__preco sup {
+    position: relative;
+    font-size: 1.5rem;
+    top: -20px;
+}
+
+.plano__divisor {
+    background-color: var(--azul-claro);
+    width: 20px;
+    margin: 5px auto;
+}
+
+.plano-lista {
+    list-style-type: none;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.plano-lista__item {
+    margin: 10px 0;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+}
+
+.plano-lista__item::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: var(--azul-claro);
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.plano__btn-comprar {
+    display: block;
+    max-width: 180px;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 15px auto;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid var(--azul-claro);
+}
+
+.plano:last-child {
+    background-color: var(--azul-claro);
+}
+
+.plano:last-child, .plano:last-child .plano__btn-comprar {
+    border: 2px solid var(--amarelo-escuro);
+}
+
+.plano:last-child .plano-lista__item::before , plano:last-child .plano__divisor {
+    background: var(--amarelo-escuro);
+}
+
+@media (max-width: 800px) {
+    .plano:nth-child(3) {
+        order: -2;
+    }
+
+    .plano:nth-child(2) {
+        order: -1
+    }
+}
+
+/* Vantagens **********************************************/
+
+.vantagens {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.vantagem {
+    max-width: 240px;
+    margin: 10px;
+}
+
+.vantagem__titulo {
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.vantagem__titulo::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+.vantagem:nth-of-type(3n+1) .vantagem__titulo::before {
+    background: var(--azul-claro);
+}
+
+.vantagem:nth-of-type(3n+2) .vantagem__titulo::before {
+    background: var(--amarelo-escuro);
+}
+
+.vantagem:nth-of-type(3n+3) .vantagem__titulo::before {
+    background: var(--azul-escuro);
+}
+
+@media (max-width: 800px) {
+    .vantagem {
+        max-width: 220px;
+    }
+}
+
+/* Newsletter ********************************************/
+
+.newsletter {
+    background-color: var(--azul-claro);
+}
+
+.newsletter-c {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-info {
+    flex: 1 1 260px;
+    padding-left: 10px;
+}
+
+.newsletter-info__titulo {
+    font-size: 2.62;
+    font-weight: bold;
+}
+
+.newsletter-info__descricao {
+    font-style: italic;
+}
+
+.newsletter-form {
+    flex: 2 1 260px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-form__input {
+    flex: 3 1 260px;
+    font-size: 1.25rem;
+    width: 325px;
+    color: black;
+    font-style: italic;
+    font-family: var(--primario);
+    border: 10px solid var(--amarelo-escuro);
+    padding: 10px;
+    margin: 0;
+    border-radius: 0px;
+}
+
+.newsletter-form__submit {
+    flex: 1 1 260px;
+    width: 192px;
+    font-family: var(--primario);
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: var(--amarelo-escuro);
+    color: black;
+    cursor: pointer;
+}
+
+/* Footer ******************************************/
+
+.footer {
+    background-color: var(--amarelo-claro);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 55px calc((100% - 960px) / 2);
+}
+
+.footer__copyright , .footer__logo {
+    padding-left: 10px;
+    padding-right: 10px;
+}
